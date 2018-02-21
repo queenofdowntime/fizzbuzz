@@ -1,3 +1,5 @@
+require_relative '../lib/fizzbuzz.rb'
+
 describe 'FizzBuzz' do
   context 'knows when a number is' do
     it 'divisible by three' do
