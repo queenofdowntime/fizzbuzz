@@ -1,3 +1,4 @@
+require 'mixlib/shellout'
 require_relative '../lib/fizzbuzz.rb'
 
 describe 'FizzBuzz' do
@@ -43,5 +44,14 @@ describe 'FizzBuzz' do
     it 'the number when it is not divisible by 3 or 5' do
       expect(fizzbuzz_says(1)).to eq 1
     end
+  end
+end
+
+# integration tests usually go somewhere else, but here is fine for now :)
+describe 'running the program from the command line' do
+  it 'should exit zero' do
+    fb = Mixlib::ShellOut.new("./lib/fizzbuzz.rb")
+    fb.run_command
+    expect(fb.exitstatus).to eq 0
   end
 end

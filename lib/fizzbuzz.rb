@@ -1,3 +1,8 @@
+#!/usr/bin/env ruby
+
+# don't forget to also `chmod +x lib/fizzbuzz.rb`
+# to make sure it has the right permissions
+
 def is_divisible_by?(number, divisor)
   number % divisor == 0
 end
