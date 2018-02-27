@@ -54,4 +54,10 @@ describe 'running the program from the command line' do
     fb.run_command
     expect(fb.exitstatus).to eq 0
   end
+
+  it 'should print what fizzbuzz says' do
+    fb = Mixlib::ShellOut.new("./lib/fizzbuzz.rb 3")
+    fb.run_command
+    expect(fb.stdout).to eq "fizz\n"
+  end
 end

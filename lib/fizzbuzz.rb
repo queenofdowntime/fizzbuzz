@@ -13,3 +13,6 @@ def fizzbuzz_says(number)
   return 'buzz' if is_divisible_by?(number, 5)
   number
 end
+
+puts fizzbuzz_says(ARGV[0].to_i)
+
