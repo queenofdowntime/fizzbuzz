@@ -60,4 +60,10 @@ describe 'running the program from the command line' do
     fb.run_command
     expect(fb.stdout).to eq "fizz\n"
   end
+
+  it 'can take multiple arguments' do
+    fb = Mixlib::ShellOut.new("./lib/fizzbuzz.rb 1 2 3 4 5")
+    fb.run_command
+    expect(fb.stdout).to eq "1\n2\nfizz\n4\nbuzz\n"
+  end
 end

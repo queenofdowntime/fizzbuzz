@@ -14,5 +14,6 @@ def fizzbuzz_says(number)
   number
 end
 
-puts fizzbuzz_says(ARGV[0].to_i)
-
+ARGV.each do|a|
+  puts fizzbuzz_says(a.to_i)
+end
